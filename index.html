@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaveenLandscape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white bg-opacity-95 backdrop-blur-md z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-green-600 flex items-center gap-2">
+                        <span class="text-3xl">🌿</span>
+                        <span>NaveenLandscape</span>
+                    </a>
+                </div>
+
+                <!-- Menu Items -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Products</a>
+                    <a href="blogs.html" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Blogs</a>
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-green-600 focus:outline-none" id="mobileMenuBtn">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Background Image Carousel -->
+        <div class="absolute inset-0 w-full h-full">
+            <div id="carousel-container" class="relative w-full h-full">
+                <img id="hero-image-1" src="https://images.unsplash.com/photo-1610080615807-7e6e48c37e2f?w=1200&h=800&fit=crop" alt="Plant Pot 1" class="carousel-image absolute inset-0 w-full h-full object-cover active">
+                <img id="hero-image-2" src="https://images.unsplash.com/photo-1516839185601-62154a45b5f1?w=1200&h=800&fit=crop" alt="Plant Pot 2" class="carousel-image absolute inset-0 w-full h-full object-cover">
+                <img id="hero-image-3" src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=1200&h=800&fit=crop" alt="Plant Pot 3" class="carousel-image absolute inset-0 w-full h-full object-cover">
+            </div>
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white px-4 max-w-2xl">
+            <div id="hero-content">
+                <h2 class="hero-title text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Transform Your Space</h2>
+                <h4 class="hero-subtitle text-xl md:text-2xl font-semibold mb-6 text-green-200">Premium Plant Pots for Every Style</h4>
+                <p class="hero-description text-base md:text-lg mb-8 leading-relaxed max-w-xl mx-auto">
+                    Elevate your indoor and outdoor gardens with our exquisite collection of handcrafted plant pots. 
+                    Designed with quality and aesthetics in mind.
+                </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="products.html" class="btn btn-primary">
+                    Explore Products
+                </a>
+                <a href="about.html" class="btn btn-secondary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <!-- Arrow Navigation Buttons -->
+        <button id="carousel-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-white bg-opacity-70 hover:bg-opacity-90 text-gray-900 p-3 rounded-full transition-all duration-300 shadow-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button id="carousel-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-white bg-opacity-70 hover:bg-opacity-90 text-gray-900 p-3 rounded-full transition-all duration-300 shadow-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+
+        <!-- Carousel Controls -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white transition-all duration-300 active" data-index="0"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-60 transition-all duration-300" data-index="1"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-60 transition-all duration-300" data-index="2"></button>
+        </div>
+    </section>
+
+    <!-- Features Section with Alternating Grid -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- Feature 1: Text Left, Image Right -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="flex flex-col justify-center">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Ceramic Elegance</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Discover our premium ceramic collection, crafted with meticulous attention to detail. 
+                        Each pot combines modern aesthetics with functional design, perfect for showcasing your favorite plants.
+                    </p>
+                    <a href="products.html" class="btn btn-primary inline-block w-fit">View Collection</a>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1610080615807-7e6e48c37e2f?w=500&h=500&fit=crop" alt="Ceramic Pot" class="rounded-lg shadow-lg object-cover h-96 w-full">
+                </div>
+            </div>
+
+            <!-- Feature 2: Image Left, Text Right -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="flex justify-center order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1516839185601-62154a45b5f1?w=500&h=500&fit=crop" alt="Terracotta Pot" class="rounded-lg shadow-lg object-cover h-96 w-full">
+                </div>
+                <div class="flex flex-col justify-center order-1 md:order-2">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Terracotta Heritage</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Experience the timeless charm of traditional terracotta pots. These eco-friendly vessels bring 
+                        warmth and character to any garden, indoors or outdoors, with their rustic appeal and durability.
+                    </p>
+                    <a href="products.html" class="btn btn-primary inline-block w-fit">View Collection</a>
+                </div>
+            </div>
+
+            <!-- Feature 3: Text Left, Image Right -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col justify-center">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Modern Marble</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Elevate your space with our exclusive marble-inspired collection. Combining luxury with functionality, 
+                        these statement pots add a touch of sophistication to any interior design.
+                    </p>
+                    <a href="products.html" class="btn btn-primary inline-block w-fit">View Collection</a>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=500&h=500&fit=crop" alt="Marble Pot" class="rounded-lg shadow-lg object-cover h-96 w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise and Services Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Expertise and Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We provide comprehensive solutions for all your plant pot needs. From handcrafted designs to sustainable materials, 
+                    our expertise spans across multiple domains to deliver excellence in every product.
+                </p>
+            </div>
+
+            <!-- 3x3 Grid of Services -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1578926314433-c6e7ad7d3750?w=200&h=200&fit=crop" alt="Custom Design" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Custom Design</h5>
+                    <p class="text-gray-600 text-sm">Create personalized pots tailored to your unique style and preferences.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1579353977991-54cebbb9d583?w=200&h=200&fit=crop" alt="Eco-Friendly" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Eco-Friendly Materials</h5>
+                    <p class="text-gray-600 text-sm">Sustainable and environmentally conscious manufacturing processes throughout.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=200&h=200&fit=crop" alt="Premium Quality" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Premium Quality</h5>
+                    <p class="text-gray-600 text-sm">Handcrafted with meticulous attention to detail and superior materials.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&h=200&fit=crop" alt="Expert Consultation" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Expert Consultation</h5>
+                    <p class="text-gray-600 text-sm">Get professional advice on selecting the perfect pot for your plants.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65b?w=200&h=200&fit=crop" alt="Fast Delivery" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Fast Delivery</h5>
+                    <p class="text-gray-600 text-sm">Quick and secure shipping to ensure your pots arrive in perfect condition.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&h=200&fit=crop" alt="Customer Support" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">24/7 Support</h5>
+                    <p class="text-gray-600 text-sm">Round-the-clock customer support to assist with your inquiries.</p>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=200&h=200&fit=crop" alt="Warranty" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Warranty Protection</h5>
+                    <p class="text-gray-600 text-sm">Comprehensive warranty coverage for your peace of mind and satisfaction.</p>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1516534775068-bb57a88a34d9?w=200&h=200&fit=crop" alt="Care Guide" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Care Guides</h5>
+                    <p class="text-gray-600 text-sm">Detailed maintenance and plant care guides with every purchase.</p>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1551633674-90b3c5a92ee3?w=200&h=200&fit=crop" alt="Bulk Orders" class="w-24 h-24 rounded-lg mx-auto mb-4 object-cover">
+                    <h5 class="text-xl font-bold text-gray-900 mb-3">Bulk Orders</h5>
+                    <p class="text-gray-600 text-sm">Special pricing and customization options for bulk and corporate orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose NaveenLandscape Section -->
+    <section class="py-20 px-4 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1500&h=900&fit=crop');">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="mb-16">
+                <h2 class="text-5xl font-bold text-white mb-4">Why Choose NaveenLandscape?</h2>
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="inline-block bg-green-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Best Plant Nursery</span>
+                    <span class="inline-block bg-green-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Wholesale Plant Nursery</span>
+                    <span class="inline-block bg-green-400 text-white px-4 py-2 rounded-full text-sm font-semibold">SkyHigh Greens</span>
+                </div>
+                <p class="text-lg text-white leading-relaxed max-w-3xl mb-8">
+                    We offer a vast range of plants, exotic varieties, and more. Our nursery is the perfect partner for your landscaping and plant design needs, 
+                    ensuring that every space we touch flourishes.
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="products.html" class="btn btn-primary">
+                        Explore Our Plants
+                    </a>
+                    <button class="btn btn-transparent">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4 Grid with Animated Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <!-- Card 1 -->
+                <div class="scroll-animate-card bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 sm:p-8 aspect-square flex flex-col items-center justify-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">🌿</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Wide Selection</h3>
+                    <p class="text-sm sm:text-base text-gray-700">Thousands of plant varieties including exotic and rare species.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scroll-animate-card bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg p-6 sm:p-8 aspect-square flex flex-col items-center justify-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Expert Guidance</h3>
+                    <p class="text-sm sm:text-base text-gray-700">Professional consultation for optimal plant selection and care.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="scroll-animate-card bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-6 sm:p-8 aspect-square flex flex-col items-center justify-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+                    <p class="text-sm sm:text-base text-gray-700">Quick and reliable shipping with healthy plant guarantee.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="scroll-animate-card bg-gradient-to-br from-lime-50 to-lime-100 rounded-lg p-6 sm:p-8 aspect-square flex flex-col items-center justify-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">💚</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Quality Assurance</h3>
+                    <p class="text-sm sm:text-base text-gray-700">Certified healthy plants with full satisfaction guarantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Send Us Your Enquiry</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Have questions about our plants or services? Get in touch with us and we'll get back to you as soon as possible.
+                </p>
+            </div>
+
+            <!-- Enquiry Form -->
+            <div class="bg-white rounded-lg shadow-xl p-8 md:p-12">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="27229af7-c18d-4e4f-8f42-19af9d55ca7b">
+                    
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <!-- Status Messages -->
+                    <div id="form-messages" class="messages"></div>
+
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="name"
+                            name="name" 
+                            placeholder="Enter your full name"
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                        >
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email"
+                            name="email" 
+                            placeholder="Enter your email address"
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                        >
+                    </div>
+
+                    <!-- Date and Time Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Date Field -->
+                        <div class="form-group">
+                            <label for="date" class="block text-sm font-semibold text-gray-900 mb-2">Preferred Date</label>
+                            <input 
+                                type="date" 
+                                id="date"
+                                name="date"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                            >
+                        </div>
+
+                        <!-- Time Field -->
+                        <div class="form-group">
+                            <label for="time" class="block text-sm font-semibold text-gray-900 mb-2">Preferred Time</label>
+                            <input 
+                                type="time" 
+                                id="time"
+                                name="time"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="form-group">
+                        <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">Message</label>
+                        <textarea 
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Tell us about your enquiry..."
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300 resize-none"
+                        ></textarea>
+                    </div>
+
+                    <!-- Additional Message Field -->
+                    <div class="form-group">
+                        <label for="message1" class="block text-sm font-semibold text-gray-900 mb-2">Additional Details</label>
+                        <textarea 
+                            id="message1"
+                            name="message1"
+                            rows="4"
+                            placeholder="Any additional information..."
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300 resize-none"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex justify-center pt-4">
+                        <button 
+                            type="submit"
+                            class="btn btn-primary px-8 py-3 text-lg font-semibold hover:shadow-lg transition-all duration-300"
+                        >
+                            Send Enquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-green-400">About PotLife</h3>
+                    <p class="text-gray-400">Premium plant pots handcrafted with passion and quality materials.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-green-400">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-green-400 transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-green-400">Contact Us</h3>
+                    <p class="text-gray-400 mb-2">📧 info@potlife.com</p>
+                    <p class="text-gray-400">📞 +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PotLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
