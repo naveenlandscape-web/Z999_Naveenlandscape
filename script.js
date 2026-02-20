@@ -1,3 +1,20 @@
+// WhatsApp Button Configuration
+const WHATSAPP_NUMBER = '+919876543210'; // Replace with your actual WhatsApp number
+const WHATSAPP_MESSAGE = 'Hello! I\'m interested in your plant pots and landscaping services.'; // Pre-texted message
+
+// Initialize WhatsApp Button
+function initWhatsAppButton() {
+    const whatsappBtn = document.getElementById('whatsapp-btn');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const encodedMessage = encodeURIComponent(WHATSAPP_MESSAGE);
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER.replace(/[^0-9]/g, '')}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+}
+
 // Carousel Content Data
 const carouselContent = [
     {
@@ -184,6 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize scroll animations
     initScrollAnimations();
+
+    // Initialize WhatsApp button
+    initWhatsAppButton();
 
     // Add scroll effect to navbar
     const nav = document.querySelector('nav');

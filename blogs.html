@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - NaveenLandscape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white bg-opacity-95 backdrop-blur-md z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-green-600 flex items-center gap-2">
+                        <span class="text-3xl">🌿</span>
+                        <span>NaveenLandscape</span>
+                    </a>
+                </div>
+
+                <!-- Menu Items -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#home" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Products</a>
+                    <a href="blogs.html" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Blogs</a>
+                    <a href="about.html" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">About</a>
+                    <a href="index.html#contact" class="text-gray-700 hover:text-green-600 transition duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-green-600 focus:outline-none" id="mobileMenuBtn">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-80 flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="relative z-10 text-center text-gray-900 px-4 max-w-2xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Our Blog</h1>
+            <p class="text-lg md:text-xl text-gray-600">Discover tips, tricks, and insights about plant care and landscaping</p>
+        </div>
+    </section>
+
+    <!-- Blogs Grid Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- Grid Layout for 20 Blogs -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Blog 1 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516839185601-62154a45b5f1?w=500&h=300&fit=crop" alt="Complete Guide to Indoor Plants" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Complete Guide to Indoor Plants</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1610080615807-7e6e48c37e2f?w=500&h=300&fit=crop" alt="Best Plants for Low Light" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Best Plants for Low Light Spaces</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=500&h=300&fit=crop" alt="Watering Schedule Tips" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Watering Schedule Tips</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 4 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1578926314433-c6e7ad7d3750?w=500&h=300&fit=crop" alt="Pot Selection Guide" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">How to Choose the Right Pot</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 5 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1579353977991-54cebbb9d583?w=500&h=300&fit=crop" alt="Seasonal Plant Care" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Seasonal Plant Care Guide</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 6 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=500&h=300&fit=crop" alt="Fertilizing Tips" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Natural Fertilizers for Plants</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 7 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop" alt="Indoor Garden Ideas" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Indoor Garden Ideas for Apartments</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 8 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65b?w=500&h=300&fit=crop" alt="Dealing with Pests" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Natural Ways to Deal with Plant Pests</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 9 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&h=300&fit=crop" alt="Propagating Plants" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">How to Propagate Your Plants</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 10 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516534775068-bb57a88a34d9?w=500&h=300&fit=crop" alt="Terracotta Maintenance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Caring for Terracotta Pots</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 11 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1551633674-90b3c5a92ee3?w=500&h=300&fit=crop" alt="Hanging Gardens" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Creating Beautiful Hanging Gardens</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 12 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=500&h=300&fit=crop" alt="Succulent Care" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Complete Succulent Care Guide</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 13 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=500&h=300&fit=crop" alt="Bedroom Plants" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Best Plants for Your Bedroom</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 14 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=500&h=300&fit=crop" alt="Outdoor Landscaping" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Outdoor Landscaping Tips</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 15 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1432405972618-c60b0cf4b4b7?w=500&h=300&fit=crop" alt="Plant Humidity" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Managing Plant Humidity Levels</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 16 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1511207736387-db7442b3e5f6?w=500&h=300&fit=crop" alt="Plant Lighting" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Understanding Plant Lighting Needs</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 17 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1533232048270-934f3f90ddf8?w=500&h=300&fit=crop" alt="Exotic Plants" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Growing Exotic Indoor Plants</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 18 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&h=300&fit=crop" alt="Plant Diseases" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Common Plant Diseases and Solutions</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 19 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1486611313433-c3b5d4a35a84?w=500&h=300&fit=crop" alt="Herb Garden" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Growing Your Own Herb Garden</h3>
+                    </div>
+                </div>
+
+                <!-- Blog 20 -->
+                <div class="blog-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=500&h=300&fit=crop" alt="Garden Design" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Modern Garden Design Ideas</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-green-400">About NaveenLandscape</h3>
+                    <p class="text-gray-400">Premium plant pots handcrafted with passion and quality materials.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-green-400">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-green-400 transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-green-400 transition">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-green-400">Contact Us</h3>
+                    <p class="text-gray-400 mb-2">📧 info@potlife.com</p>
+                    <p class="text-gray-400">📞 +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 NaveenLandscape. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a id="whatsapp-btn" href="#" class="whatsapp-button" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.733 0-3.464.483-4.964 1.394-.458.274-.854.582-1.206.916L1.07 3.591c.026 0 .04.007.047.018.213.36.424.721.631 1.084.205.363.397.735.568 1.112.173.381.336.766.488 1.153.377.927.711 1.835.93 2.69.234.956.375 1.844.382 2.696 0 1.717-.35 3.37-1.031 4.893-.194.456-.41.911-.647 1.356l-.084.143c-.032.054-.063.108-.09.163.165.014.338.025.512.025 1.926 0 3.757-.494 5.345-1.357 1.588-.863 2.923-2.084 3.866-3.497.943-1.413 1.458-3.03 1.458-4.747 0-1.717-.515-3.334-1.458-4.747-.943-1.413-2.278-2.634-3.866-3.497-1.588-.863-3.419-1.357-5.345-1.357"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
